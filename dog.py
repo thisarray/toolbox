@@ -4,7 +4,9 @@ if __name__ == '__main__':
     import argparse
     import os.path
     import textwrap
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('-w', '--width', type=int, default=72,
                         help='integer width of the output lines')
     parser.add_argument('paths', nargs='*', default=[],
