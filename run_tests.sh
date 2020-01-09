@@ -2,8 +2,10 @@
 #
 # Generate actual output to compare against expected output in tests.
 
-python3 cat.py LICENSE > tests/cat_wrap.temp
-python3 cat.py -w 79 LICENSE > tests/cat_LICENSE.temp
+python3 cat.py LICENSE > tests/cat_LICENSE.temp
+
+python3 dog.py LICENSE > tests/dog_wrap.temp
+python3 dog.py -w 79 LICENSE > tests/dog_LICENSE.temp
 
 python3 checksum.py md5 LICENSE > tests/checksum_md5.temp
 python3 checksum.py md5 LICENSE sha1 > tests/checksum_sha1.temp
