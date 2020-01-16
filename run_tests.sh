@@ -2,6 +2,12 @@
 #
 # Generate actual output to compare against expected output in tests.
 
+ls -al LICENSE
+python3 chmod_walk.py -f 600 LICENSE
+ls -al LICENSE
+python3 chmod_walk.py LICENSE
+ls -al LICENSE
+
 python3 cat.py LICENSE > tests/cat_LICENSE.temp
 
 python3 dog.py LICENSE > tests/dog_wrap.temp
