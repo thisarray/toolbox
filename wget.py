@@ -11,8 +11,8 @@ if __name__ == '__main__':
                         help='URL to get')
     args = parser.parse_args()
 
-    if os.path.isfile(args.output):
-        parser.exit('{0} already exists!'.format(args.output))
+    if os.path.exists(args.output):
+        parser.error('{0} already exists!'.format(args.output))
 
     request = urllib.request.Request(args.url)
     with urllib.request.urlopen(request) as response:
