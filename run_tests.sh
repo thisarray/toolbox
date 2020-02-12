@@ -17,6 +17,10 @@ python3 checksum.py md5 LICENSE > tests/checksum_md5.temp
 python3 checksum.py md5 LICENSE sha1 > tests/checksum_sha1.temp
 python3 checksum.py LICENSE sha256 > tests/checksum_sha256.temp
 
+python3 wget.py https://raw.githubusercontent.com/thisarray/toolbox/master/LICENSE > tests/wget_LICENSE1.temp
+python3 wget.py https://raw.githubusercontent.com/thisarray/toolbox/master/LICENSE -o LICENSE &> tests/wget_exists.temp
+python3 wget.py https://raw.githubusercontent.com/thisarray/toolbox/master/LICENSE -o tests/wget_LICENSE2.temp
+
 # Compare the expected output and the actual output generated above
 # List all expected output | get their filenames (cut extension) | diff expected and actual output
 ls tests/*.out | cut -d '.' -f1 | xargs -I "{}" diff -q "{}.out" "{}.temp"

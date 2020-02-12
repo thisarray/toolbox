@@ -1,0 +1,2 @@
+usage: wget.py [-h] [-o OUTPUT] url
+wget.py: error: LICENSE already exists!
