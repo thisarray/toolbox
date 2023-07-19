@@ -10,6 +10,8 @@ ls -al LICENSE
 
 python3 cat.py LICENSE > tests/cat_LICENSE.temp
 
+python3 cattail.py LICENSE > tests/cattail_LICENSE.temp
+
 python3 dog.py LICENSE > tests/dog_wrap.temp
 python3 dog.py -w 79 LICENSE > tests/dog_LICENSE.temp
 
