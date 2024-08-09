@@ -19,6 +19,8 @@ python3 checksum.py md5 LICENSE > tests/checksum_md5.temp
 python3 checksum.py md5 LICENSE sha1 > tests/checksum_sha1.temp
 python3 checksum.py LICENSE sha256 > tests/checksum_sha256.temp
 
+python3 sort_sha.py tests/sort_sha.in > tests/sort_sha.temp
+
 python3 subset.py tests tests/ > tests/subset1.temp
 python3 subset.py tests/ tests > tests/subset2.temp
 
